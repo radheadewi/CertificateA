@@ -1,0 +1,10 @@
+# ini komentar
+*.[oa]             # abaikan file *.o dan *.a
+*~                 # abaikan file yang diakhiri dengan ~
+*.bak              # abaikan file dengan ekstensi .bak
+!file.bak          # pengecualian, file.bak tidak diabaikan
+/css               # hanya mengabaikan file didalam folder css, 
+                    # foldernya didalamnya tidak
+test/              # abaikan semua file didalam folder test/
+doc/*.txt          # abaikan doc/notes.txt, 
+                    # tapi tidak doc/server/arch.txt
