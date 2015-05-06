@@ -84,31 +84,8 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-6">
-                    <h1 class="page-header">Tambahkan File Sertifikat</h1>
-                    <div class="form-group">
-                        <label>Masukkan URL</label>
-                        <input class="form-control" placeholder="URL" name="password" type="text" value="">
-                    </div>
-
-                   <!-- <div class="form-group">
-                        <label>Kode negara</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Provinsi</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Kota</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Organisasi</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>!-->
+                    <h1 class="page-header">Download File Sertifikat</h1>
+                    <button type="submit" class="btn btn-default">Downnload</button>
                 </div>
             </div>
         </div>

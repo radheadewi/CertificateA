@@ -74,7 +74,7 @@
                             <a href="<?php echo site_url('add_certificate');?>"><i class="fa fa-dashboard fa-fw" ></i>Request Certificate</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i>Daftar Certificate</a>
+                            <a href="<?php echo site_url('list_certificate');?>"><i class="fa fa-table fa-fw"></i>Daftar Certificate</a>
                         </li>
                     </ul>
                 </div>
