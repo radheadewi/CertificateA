@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2015 at 02:38 PM
+-- Generation Time: May 06, 2015 at 04:53 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `certificate` (
   `challenge_password` int(11) NOT NULL,
   `optional_company` int(11) NOT NULL,
   `url_certificate` int(11) NOT NULL,
-  `status_certificate` int(11) NOT NULL
+  `status_certificate` int(11) NOT NULL,
+  `url` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
