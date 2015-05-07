@@ -96,9 +96,11 @@
                     
                     <?php foreach($results->result() as $row) 
                     {?>
+                    
                     <tr>
                         <td align="left" valign="top"><?=$row->id_certificate?> </td>
-                        <td align="left" valign="top"><?=$row->nama_user?></td>
+                        <td align="left" valign="top"><?=$row->nama_certificate?></td>
+                        <td align="left" valign="top"><input type="submit" class="btn btn-lg btn-success btn-block"></td>
                     </tr>
                     
                     <?php 
