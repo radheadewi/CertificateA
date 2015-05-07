@@ -16,12 +16,10 @@ class Mdl_beranda_admin extends CI_Model{
 		return $this->db->get();
 	}
 
-	function signing($num=0, $offset=0)
+	function getItemById($id_certificate)
 	{
 		$this->db->flush_cache();
-		$this->db->select('nama_certificate, url');
-		$this->db->from('certificate');
-		$this->db->limit($num, $offset);
-		return $this->db->get();
+		$this->db->where('id_certificate', $id_certificate);
+		return $this->db->get('certificate');
 	}
 }

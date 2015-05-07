@@ -17,10 +17,12 @@ class Beranda_admin extends CI_Controller {
 		$this->load->view('beranda/beranda_admin', $data);
 	}
 
-	function sign()
+	function sign($id_certificate)
 	{
-		$output = $_POST['nama'];
-		$csrdata = $_POST['CSR'];
+		$data['result'] = $this->beranda_admin->getItemById($id_certificate);
+
+		$output = $data['result']->row()->nama_certificate;
+		$csrdata = $data['result']->row()->url;
 
 		$file = "C:/xampp/htdocs/sign/" . $output .".crt";
 
