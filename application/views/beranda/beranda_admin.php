@@ -97,11 +97,8 @@
                     <?php foreach($results->result() as $row) 
                     {?>
                     <tr>
-                        <td align="left" valign="top"><?=$row->id_barang?> </td>
-                        <td align="left" valign="top"><?=$row->nama_kategori?> </td>
-                        <td align="left" valign="top" class="table-actions">
-
-                        </td>
+                        <td align="left" valign="top"><?=$row->id_certificate?> </td>
+                        <td align="left" valign="top"><?=$row->nama_user?></td>
                     </tr>
                     
                     <?php 

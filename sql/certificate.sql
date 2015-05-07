@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2015 at 04:53 PM
+-- Generation Time: May 07, 2015 at 03:35 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -29,20 +29,29 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `certificate` (
 `id_certificate` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `tanggal` int(11) NOT NULL,
-  `nama_user` int(11) NOT NULL,
-  `email_user` int(11) NOT NULL,
-  `kode_negara_user` int(11) NOT NULL,
-  `provinsi_user` int(11) NOT NULL,
-  `kota_user` int(11) NOT NULL,
-  `nama_organisasi` int(11) NOT NULL,
-  `unit_organisasi` int(11) NOT NULL,
-  `challenge_password` int(11) NOT NULL,
-  `optional_company` int(11) NOT NULL,
-  `url_certificate` int(11) NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `nama_user` varchar(25) DEFAULT NULL,
+  `email_user` varchar(25) DEFAULT NULL,
+  `kode_negara_user` int(11) DEFAULT NULL,
+  `provinsi_user` varchar(25) DEFAULT NULL,
+  `kota_user` varchar(25) DEFAULT NULL,
+  `nama_organisasi` varchar(25) DEFAULT NULL,
+  `unit_organisasi` varchar(25) DEFAULT NULL,
+  `challenge_password` varchar(25) DEFAULT NULL,
+  `optional_company` varchar(25) DEFAULT NULL,
+  `url_certificate` varchar(25) NOT NULL,
   `status_certificate` int(11) NOT NULL,
   `url` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `certificate`
+--
+
+INSERT INTO `certificate` (`id_certificate`, `id_user`, `tanggal`, `nama_user`, `email_user`, `kode_negara_user`, `provinsi_user`, `kota_user`, `nama_organisasi`, `unit_organisasi`, `challenge_password`, `optional_company`, `url_certificate`, `status_certificate`, `url`) VALUES
+(1, 1, '2015-05-07 01:24:31', '0', '0', 111, '112', '0', '0', '0', '0', '0', '0', 0, 'https://www.facebook.com/groups/317682485073014/436199713221290/?notif_t=group_activity'),
+(2, 1, '2015-05-07 01:27:18', 'Radhea', '', 0, '', '0', '0', '0', '0', '0', '0', 0, 'https://www.facebook.com/groups/317682485073014/436199713221290/?notif_t=group_activity'),
+(3, 1, '2015-05-07 01:31:26', 'Radhea', 'radhea.dewi@gmail.com', 112, NULL, NULL, NULL, NULL, NULL, NULL, 'www.facebook.com', 0, 'https://www.facebook.com/groups/317682485073014/436199713221290/?notif_t=group_activity');
 
 -- --------------------------------------------------------
 
@@ -89,7 +98,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `certificate`
 --
 ALTER TABLE `certificate`
-MODIFY `id_certificate` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id_certificate` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
