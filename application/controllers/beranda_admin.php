@@ -23,12 +23,12 @@ class Beranda_admin extends CI_Controller {
 
 		$output = $data['result']->row()->nama_certificate;
 		$csrdata = $data['result']->row()->url;
+        echo $csrdata;
+		$file = "C:/xampp/htdocs/projectCA/" . $output .".crt";
 
-		$file = "C:/xampp/htdocs/sign/" . $output .".crt";
+		$cacert = file_get_contents("C:/xampp/htdocs/projectCA/element dasar/CA/ca.crt");
 
-		$cacert = file_get_contents("C:/xampp/htdocs/sign/ca/ca.crt");
-
-		$privkey = array(file_get_contents("C:/xampp/htdocs/sign/ca/ca.key"), "fandazky23");
+		$privkey = array(file_get_contents("C:/xampp/htdocs/projectCA/element dasar/CA/ca.key"), "fandazky23");
 
 		$usercert = openssl_csr_sign($csrdata, $cacert, $privkey, 365);
 
