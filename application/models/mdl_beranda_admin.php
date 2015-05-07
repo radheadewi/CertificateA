@@ -1,6 +1,6 @@
 <?php if(!defined('BASEPATH')) exit('No direct script allowed');
 
-class mdl_barang extends CI_Model{
+class Mdl_beranda_admin extends CI_Model{
 	
 	function __construct()
 	{
