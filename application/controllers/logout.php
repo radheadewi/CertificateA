@@ -17,8 +17,23 @@ class Logout extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct() {
+        parent::__construct();
+        
+        // Load form helper library
+        $this->load->helper('form');
+        
+        // Load session library
+        $this->load->library('session');
+        
+        // Load validation library
+        $this->load->library('form_validation');
+    }
+	
 	public function index()
 	{
+		$this->session->sess_destroy();
 		$this->load->view('auth/login.php');
 	}
 

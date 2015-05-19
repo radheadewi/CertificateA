@@ -6,15 +6,28 @@ class Beranda_admin extends CI_Controller {
 	{
 		parent::__construct();
 		
+        $this->load->library(array('session'));
+         
+        $this->load->helper('url');
+
+        $this->load->model('mdl_login');
+        
+        $this->load->database();
+		
 		$this->load->model('mdl_beranda_admin', 'beranda_admin');
 		
 	}
 
 	function index()
 	{
+		if($this->session->userdata('isLogin') == FALSE)
+        {
+            redirect('auth/do_login');
+        }
+
 		$config['per_page'] = '100';		
 		$data['results'] = $this->beranda_admin->getItem($config['per_page'], $this->uri->segment(3));
-		$this->load->view('beranda/beranda_admin', $data);
+		$this->load->view('admin/beranda_admin', $data);
 	}
 
 	function sign($id_certificate)

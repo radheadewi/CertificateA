@@ -55,9 +55,10 @@
                                         <input name="remember" type="checkbox" value="Remember Me">Ingatkan saya
                                     </label>
                                 </div>
-                                <input type="submit" class="btn btn-lg btn-success btn-block">Login</a>
+                                <input type="submit" class="btn btn-lg btn-success btn-block" >Atau</a>
                             </fieldset>
                         </form>
+                        <a href="auth/register.php"><button class="btn btn-lg btn-success btn-block">Register</button></a>
                     </div>
                 </div>
             </div>

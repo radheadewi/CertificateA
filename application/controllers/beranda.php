@@ -17,8 +17,33 @@ class Beranda extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+
+	public function __construct() {
+        parent::__construct();
+
+        $this->load->library(array('session'));
+         
+        $this->load->helper('url');
+
+        $this->load->model('mdl_login');
+        
+        $this->load->database();
+      
+    }
+
+
+        
+        
+    }
+
 	public function index()
 	{
+		if($this->session->userdata('isLogin') == FALSE)
+        {
+            redirect('auth/do_login');
+        }
+
 		$this->load->view('beranda/beranda.php');
 	}
 

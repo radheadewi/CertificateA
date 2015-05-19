@@ -51,7 +51,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile:</a><?php print_r($userData); ?>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -71,10 +71,7 @@
                         <br>
                         <br>
                         <li>
-                            <a href="<?php echo site_url('add_certificate');?>"><i class="fa fa-dashboard fa-fw" ></i>Request Certificate</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo site_url('list_certificate');?>"><i class="fa fa-table fa-fw"></i>Daftar Certificate</a>
+                            <a href="<?php echo site_url('beranda_admin');?>"><i class="fa fa-dashboard fa-fw" ></i>Daftar Request</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +81,39 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Beranda</h1>
+                    <h1 class="page-header">Daftar Request</h1>
+                    <div class="no-margin">
+                <table class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th align="left" valign="top" scope="col">Id Request</th>
+                        <th align="left" valign="top" scope="col">Nama pemohon request</th>
+                        <th align="left" valign="top" scope="col">Setujui</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    
+                    <?php foreach($results->result() as $row) 
+                    {?>
+                    
+                    <tr>
+                        <td align="left" valign="top"><?=$row->id_certificate?> </td>
+                        <td align="left" valign="top"><?=$row->nama_certificate?></td>
+                        <td align="left" valign="top" class="table-actions">
+                            <?php
+                                echo anchor('beranda_admin/sign/'.$row->id_certificate, '<img src="'.base_url().'asset/approved.png" width="16" height="16">', array('class'=>'with-tip', 'title'=>'Edit'));
+                            ?>
+                        </td>
+                    </tr>
+                    
+                    <?php 
+                    }?>
+                    
+                </tbody>
+            
+            </table>
+            </div>
                 </div>
             </div>
         </div>
