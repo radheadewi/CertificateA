@@ -55,7 +55,6 @@
                                         <input name="remember" type="checkbox" value="Remember Me">Ingatkan saya
                                     </label>
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
                                 <input type="submit" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                         </form>

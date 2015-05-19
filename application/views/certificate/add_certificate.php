@@ -85,30 +85,19 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h1 class="page-header">Tambahkan File Sertifikat</h1>
+                    <form role="form" action="<?php echo site_url('add_certificate/insert');?>" method="post">
+                    <fieldset>
                     <div class="form-group">
-                        <label>Masukkan URL</label>
-                        <input class="form-control" placeholder="URL" name="password" type="text" value="">
+                        <label>Nama</label>
+                        <input class="form-control" placeholder="URL" name="nama_certificate" type="text">
                     </div>
-
-                   <!-- <div class="form-group">
-                        <label>Kode negara</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>
-
                     <div class="form-group">
-                        <label>Provinsi</label>
-                        <input class="form-control" placeholder="Enter text">
+                        <label>CSR</label>
+                        <textarea class="form-control" name="url" cols="65" rows="20"> </textarea>
                     </div>
-
-                    <div class="form-group">
-                        <label>Kota</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Organisasi</label>
-                        <input class="form-control" placeholder="Enter text">
-                    </div>!-->
+                    <input type="submit" class="btn btn-lg btn-success btn-block"></a>
+                    </fieldset>
+                    </form>
                 </div>
             </div>
         </div>

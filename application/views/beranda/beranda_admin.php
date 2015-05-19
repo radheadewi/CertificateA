@@ -88,7 +88,7 @@
                     <tr>
                         <th align="left" valign="top" scope="col">Id Request</th>
                         <th align="left" valign="top" scope="col">Nama pemohon request</th>
-                        <th align="left" valign="top" scope="col">Aksi</th>
+                        <th align="left" valign="top" scope="col">Setujui</th>
                     </tr>
                 </thead>
                 
@@ -96,9 +96,15 @@
                     
                     <?php foreach($results->result() as $row) 
                     {?>
+                    
                     <tr>
                         <td align="left" valign="top"><?=$row->id_certificate?> </td>
-                        <td align="left" valign="top"><?=$row->nama_user?></td>
+                        <td align="left" valign="top"><?=$row->nama_certificate?></td>
+                        <td align="left" valign="top" class="table-actions">
+                            <?php
+                                echo anchor('beranda_admin/sign/'.$row->id_certificate, '<img src="'.base_url().'asset/approved.png" width="16" height="16">', array('class'=>'with-tip', 'title'=>'Edit'));
+                            ?>
+                        </td>
                     </tr>
                     
                     <?php 
